@@ -2,6 +2,90 @@ SESSION 1
 ----------------
 
 - Explain what is source code versioning (Explain git commands)
+Source code versioning (also known as version control) is a system used to:Track changes made to your source code over time.
+Restore previous versions of your code if something goes wrong.
+Collaborate with multiple developers without overwriting each other’s work.
+Manage different features or bug fixes through branching.
+
+git init :	Initialize a new Git repository in the current directory.
+git clone <repo-url> :	Copy a remote repository to your local machine.
+git status :	Show the current status of files (staged, modified, untracked).
+git add <file> :	Stage a specific file for commit.
+git add . :	Stage all changed files for commit.
+git commit -m "message" :	Save staged changes with a commit message.
+git log	: View the history of commits.
+git branch	: List all branches in the repository.
+git branch <name>	: Create a new branch with the given name.
+git checkout <branch>	: Switch to the specified branch.
+git merge <branch> :	Merge another branch into your current branch.
+git push origin <branch>	: Upload local commits to the remote repository.
+git pull origin <branch> :	Download and merge changes from the remote repository.
+git config --global user.name "Name" :	Set your Git username globally.
+git config --global user.email "email@example.com" :	Set your Git email globally.
+
+
+
 - how to setup jdk or jre in eclipse project?
+
+Go to the top menu:
+Window → Preferences (or Eclipse → Preferences on Mac).
+
+Navigate to:
+Java → Installed JREs
+
 - Explain what is classpath, and some Basic java commands.
+
+Why Classpath is Important?
+
+Classpath = Path where Java looks for code
+
+When you run or compile a Java program that uses external libraries or classes, the JVM needs to know where to find those files. The classpath helps it locate:
+
+.class files
+
+.jar files (Java libraries)
+
+Folders with compiled code
+
+Basic java commands:
+====================
+
+javac FileName.java	: Compiles a Java source file into bytecode (.class file).
+
+java ClassName	: Runs a compiled Java class (no .class or .java needed).
+
+javac -d out MyClass.java	: Compiles and puts the .class file inside the out/ directory.
+
+javac -classpath libs/mylib.jar MyClass.java :	Compiles with an external .jar file in classpath.
+
+java -cp libs/mylib.jar;. MyClass	: Runs a class using external .jar and current directory.
+
+java -jar MyApp.jar :	Runs a Java application packaged in a .jar file.
+
+jar cf myjar.jar *.class :	Creates a new JAR file from all class files in the folder.
+
+jar tf myjar.jar :	Lists the contents of a JAR file.
+
+jar xf myjar.jar :	Extracts all contents of a JAR file.
+
+javap ClassName :	Disassembles class bytecode to show its structure.
+
+javap -c ClassName :	Shows disassembled bytecode of the class (for debugging).
+
+java -version :	Shows the installed Java version.
+
+javac -version :	Shows the installed Java compiler version.
+
+java --help or javac --help :	Displays command options and usage help.
+
+
 - how to debug in java IDEs? Shortcuts in eclipse for debugging
+
+F5				Step Into (go inside method)
+F6				Step Over (run line, skip method body)
+F7				Step Out (finish method and return)
+F8				Resume (run until next breakpoint)
+Ctrl + Shift + B	Toggle breakpoint
+Ctrl + F2		Stop debugging
+F11				Debug the selected Java program
+Ctrl + R		Run the program (not debug)
