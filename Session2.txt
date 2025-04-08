@@ -1,0 +1,186 @@
+- Oops concept
+
+*Object
+========
+An object is a real-world entity with data (variables) and behavior (methods).
+
+ATM Example: A bank account is an object.
+It has:
+
+Data (Variables) : balance, accountNumber
+
+Behavior (Methods): deposit(), withdraw(), checkBalance()
+ 
+*Class
+=======
+A class is a blueprint to create objects. It's a kind of container.
+
+It defines what data and what actions an object will have.
+
+*Inheritance 
+============
+
+Inheritance is a mechanism of acquiring the properties of another class.
+
+Child class inherits from parent class.
+
+types of inhertance: 
+-------------------
+Single Inheritance
+Multilevel Inheritance
+Multiple Inheritance
+Hirarchical Inheritance
+Hybrid Inheritance
+
+
+*Abstraction 
+=============
+
+Abstraction hides complex details and shows only what’s necessary.
+
+Focus on what it does, not how it does.
+
+ATM Example:
+
+You press "Withdraw ₹500" → You don’t see how it checks your balance, verifies PIN, updates database, etc.
+
+*Polymorphism
+=============
+Polymorphism means same method, different behavior.
+
+Useful when we use the same interface for different types.
+
+ATM Example:
+
+same functionality but the bank are diff of atm
+
+
+*Encapsulation
+===============
+
+Encapsulation means hiding data and providing access via getters and setters.
+
+Protects data from being accessed directly.
+
+like, in ATM,
+Pin, accountnumber are keep as a private 
+
+
+- Access Modifiers
+
+
+*private
+
+Only visible inside the same class.
+Nobody else (even in the same package) can access it.
+
+*Protected
+
+Visible in the same package, and also in subclasses (child classes) — even if they are in different packages.
+
+*default
+
+Visible within the same package, but not outside the package.
+
+
+*Public
+
+Visible from anywhere — any class, any package.
+
+
+- Static, Final, Finally, finalize, etc..
+
+*static:
+
+Belongs to class, not object	
+Shared variable/method
+ 
+ 
+*Final: 
+var: 	Can't be changed
+method: 	Can't be override
+class: 	Can't be inherited
+
+
+*Finally:
+
+Always runs after try-catch, even if an exception is thrown
+
+*finalize:
+
+A method called by garbage collector before destroying object
+
+protected void finalize() {
+   //clean up code
+}
+
+Used for cleanup
+
+
+
+- Exception Handling, custom exceptions
+
+*Exception Handling
+
+Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.
+
+* custom exceptions
+
+ Creating our own Exception is known as custom exception or user-defined exception
+ 
+ to create custom exception, we need to extend Exception 
+
+- Collections (List, Set , Map)
+
+The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+
+Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, manipulation, and deletion.
+
+A Collection represents a single unit of objects, i.e., a group. It represents a set of classes and interfaces
+
+****List Interface***
+
+Ordered collection (index-based)
+
+Allows duplicates
+
+easily accessible
+
+Class								Description
+=====================================================================================
+ArrayList			Resizable array, fast for retrieval, slower for insert/delete
+
+LinkedList			Doubly linked list, fast for insert/delete, slower for access
+
+Vector				Synchronized version of ArrayList (thread-safe)
+
+Stack				LIFO (Last-In-First-Out) stack based on Vector
+
+
+***Set Interface****
+
+Unordered collection (no index)
+
+Does not allow duplicate elements
+
+Class							Description
+========================================================================================
+HashSet						Fast, no duplicate, unordered
+
+LinkedHashSet				Maintains insertion order
+
+TreeSet						Sorted set (ascending), no duplicates
+
+
+***Map Interface***
+
+Class									Description
+==========================================================================================
+
+HashMap						Unordered, allows 1 null key and multiple null values
+
+LinkedHashMap				Maintains insertion order
+
+TreeMap						Sorted by key (natural order), no null keys allowed
+
+Hashtable					Synchronized version of HashMap, no null keys or values
