@@ -1,0 +1,7 @@
+SESSION 1
+----------------
+
+- Explain what is source code versioning (Explain git commands)
+- how to setup jdk or jre in eclipse project?
+- Explain what is classpath, and some Basic java commands.
+- how to debug in java IDEs? Shortcuts in eclipse for debugging
